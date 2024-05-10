@@ -8,6 +8,14 @@ const getItems = catchAsync(async (req: Request, res: Response) => {
   res.status(200).json({ status: "success", data: item });
 });
 
+const getItem = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id;
+  if (!id) {
+    return new AppError("Item not found", 404);
+  }
+  const item = await Item.findById(id);
+  res.status(200).json({ status: "success", data: item });
+});
 const addItem = catchAsync(async (req: Request, res: Response) => {
   const item = await Item.create(req.body);
 
@@ -28,4 +36,4 @@ const deleteItem = catchAsync(async (req: Request, res: Response) => {
   res.status(200).json({ status: "success", data: item });
 });
 
-export { getItems, addItem, updateItem, deleteItem };
+export { getItems, addItem, updateItem, deleteItem, getItem };

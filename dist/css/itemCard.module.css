@@ -4,7 +4,7 @@
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 16px;
+  padding: 6px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -13,8 +13,8 @@
   transform: translateY(-4px);
 }
 .itemCard .itemImage {
-  width: 100%;
-  max-height: 200px;
+  width: 200px;
+  height: 200px;
   position: relative;
   object-position: center;
   object-fit: cover;
@@ -22,20 +22,44 @@
 }
 .itemCard .itemInfo {
   margin-top: 12px;
-  text-align: center;
+  width: 100%;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.itemCard .itemName {
+.itemCard .itemInfo .itemName {
   font-size: 18px;
   font-weight: bold;
   color: #333;
   margin-bottom: 8px;
+}
+.itemCard .itemInfo .itemBrand {
+  opacity: 0.8;
 }
 .itemCard .itemPrice {
   font-size: 16px;
   color: #666;
   margin-bottom: 12px;
 }
-.itemCard .addToCartBtn {
+.itemCard .inStock {
+  color: green;
+  padding: 8px;
+  margin: 4px 0;
+}
+.itemCard .outOfStock {
+  color: red;
+  padding: 8px;
+  margin: 4px 0;
+}
+.itemCard .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 12px;
+  width: 100%;
+}
+.itemCard .buttons .seeMore {
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -45,6 +69,19 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.itemCard .addToCartBtn:hover {
+.itemCard .buttons .seeMore:hover {
   background-color: #0056b3;
+}
+.itemCard .buttons .delete {
+  background-color: #ff0033;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.itemCard .buttons .delete:hover {
+  background-color: #b30000;
 }/*# sourceMappingURL=itemCard.module.css.map */
