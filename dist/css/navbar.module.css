@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap");
+.container {
+  background-color: #343a40;
+  display: flex;
+  width: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+.container .body ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}/*# sourceMappingURL=navbar.module.css.map */

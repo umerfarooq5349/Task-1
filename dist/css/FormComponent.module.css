@@ -1,0 +1,62 @@
+/* FormComponent.module.scss */
+.addProductForm {
+  display: flex;
+  flex-direction: column;
+}
+.addProductForm .group {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+.addProductForm .group input {
+  padding: 12px;
+  margin: 0 8px;
+}
+.addProductForm .group_label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  justify-content: start;
+  text-align: start;
+  align-items: start;
+}
+.addProductForm .input_feild {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+.addProductForm .input_feild:focus {
+  border-color: #ffc107;
+}
+.addProductForm .input_feild:disabled {
+  background-color: #f2f2f2;
+  cursor: not-allowed;
+}
+.addProductForm .textarea_field {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 4px;
+  resize: none;
+}
+.addProductForm .textarea_field:focus {
+  border-color: #ffc107; /* Change border color on focus */
+}
+.addProductForm .submit_button {
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.addProductForm .submit_button:hover {
+  background-color: #b88a02;
+}/*# sourceMappingURL=FormComponent.module.css.map */

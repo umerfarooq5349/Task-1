@@ -1,0 +1,50 @@
+.itemCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.itemCard:hover {
+  transform: translateY(-4px);
+}
+.itemCard .itemImage {
+  width: 100%;
+  max-height: 200px;
+  position: relative;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.itemCard .itemInfo {
+  margin-top: 12px;
+  text-align: center;
+}
+.itemCard .itemName {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+.itemCard .itemPrice {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 12px;
+}
+.itemCard .addToCartBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.itemCard .addToCartBtn:hover {
+  background-color: #0056b3;
+}/*# sourceMappingURL=itemCard.module.css.map */
