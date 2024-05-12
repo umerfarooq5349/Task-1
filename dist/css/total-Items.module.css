@@ -15,6 +15,24 @@
 .container .body {
   display: flex;
   flex-wrap: wrap;
+  width: 1000px;
+  justify-content: center;
   gap: 20px;
-  width: 100%;
+}
+
+/* Sidebar.module.scss */
+.sidebar {
+  color: #fff;
+  width: 500px;
+  z-index: 1;
+  position: fixed;
+  text-align: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.sidebarclose {
+  display: hidden;
 }/*# sourceMappingURL=total-Items.module.css.map */
