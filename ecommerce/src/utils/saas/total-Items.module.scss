@@ -1,0 +1,40 @@
+@import "./theme/theme.scss";
+
+.container {
+  width: inherit;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  // background-color: $secondary-color;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  h1 {
+    padding: 20px 0;
+  }
+  .body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* Sidebar.module.scss */
+
+.sidebar {
+  color: #fff;
+  width: 500px;
+  z-index: 1;
+  position: fixed;
+  text-align: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.sidebarclose {
+  display: hidden;
+}
