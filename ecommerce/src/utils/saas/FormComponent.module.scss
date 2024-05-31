@@ -1,70 +1,134 @@
-/* FormComponent.module.scss */
-
-.addProductForm {
+@import "./theme/theme.scss";
+.form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  // max-width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  background-color: $form-bg-color;
+  color: #fff;
+  border: 1px solid $form-border-color;
 
-  .group {
-    margin: 20px;
-    display: flex;
-    // background-color: #007bff;
-    gap: 10px;
-    justify-content: space-around;
-    input {
-      padding: 12px;
-      margin: 0 8px;
+  label {
+    position: relative;
+    .input {
+      background-color: $input-bg-color;
+      color: #fff;
+      width: 100%;
+      padding: 20px 5px 5px 10px;
+      outline: 0;
+      border: 1px solid $input-border-color;
+      border-radius: 10px;
+      font-size: medium;
+
+      &:placeholder-shown + span {
+        top: 12.5px;
+        font-size: 0.9em;
+      }
+
+      &:focus + span,
+      &:valid + span {
+        color: $title-color;
+        top: 0px;
+        font-size: 0.7em;
+        font-weight: 600;
+      }
+    }
+
+    .input + span {
+      color: $input-placeholder-color;
+      position: absolute;
+      left: 10px;
+      top: 0px;
+      font-size: 0.9em;
+      cursor: text;
+      transition: 0.3s ease;
     }
   }
+}
 
-  .group_label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    justify-content: start;
-    text-align: start;
-    align-items: start;
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: $title-color;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: $title-color;
   }
 
-  .input_feild {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    margin-top: 4px;
-    &:focus {
-      border-color: #ffc107;
-    }
-    &:disabled {
-      background-color: #f2f2f2;
-      cursor: not-allowed;
-    }
+  &::before {
+    width: 18px;
+    height: 18px;
   }
 
-  .textarea_field {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    margin-top: 4px;
-    resize: none;
-    &:focus {
-      border-color: #ffc107; /* Change border color on focus */
-    }
+  &::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
   }
+}
 
-  .submit_button {
-    background-color: #ffc107;
-    color: #fff;
-    border: none;
-    margin-top: 20px;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.message,
+.signin {
+  font-size: 14.5px;
+  color: $text-color;
+
+  a {
+    color: $title-color;
 
     &:hover {
-      background-color: #b88a02;
+      text-decoration: underline $text-hover-color;
     }
+  }
+
+  &.signin {
+    text-align: center;
+  }
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s ease;
+  background-color: $submit-bg-color;
+
+  &:hover {
+    background-color: $submit-hover-bg-color;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
   }
 }

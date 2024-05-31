@@ -1,88 +1,97 @@
-.itemCard {
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 6px;
-  width: 300px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-.itemCard:hover {
-  transform: translateY(-4px);
-}
-.itemCard .itemImage {
-  width: 280px;
-  height: 200px;
+  gap: 10px;
+  border-radius: 20px;
   position: relative;
-  object-position: center;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 16px;
+}
+
+.itemImage {
   object-fit: cover;
-  border-radius: 8px;
+  width: 270px;
+  height: 250px;
+  border-radius: 10px;
 }
-.itemCard .itemInfo {
-  margin-top: 12px;
-  width: 100%;
-  color: #333;
+
+.itemInfo {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
 }
-.itemCard .itemInfo .itemName {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 8px;
+
+.itemName,
+.itemBrand {
+  font-size: 1.2rem;
+  margin: 0;
 }
-.itemCard .itemInfo .itemBrand {
-  opacity: 0.8;
+
+.itemPrice {
+  font-size: 1.5rem;
+  color: #00bfff;
+  margin: 8px 0;
 }
-.itemCard .itemPrice {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 12px;
+
+.inStock,
+.outOfStock {
+  font-size: 1rem;
+  margin: 8px 0;
 }
-.itemCard .inStock {
+
+.inStock {
   color: green;
-  padding: 8px;
-  margin: 4px 0;
 }
-.itemCard .outOfStock {
+
+.outOfStock {
   color: red;
-  padding: 8px;
-  margin: 4px 0;
 }
-.itemCard .buttons {
+
+.buttons {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-top: 12px;
-  width: 100%;
 }
-.itemCard .buttons .seeMore {
-  background-color: #007bff;
-  color: #fff;
+@media screen and (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    padding: 2px;
+    margin: 4px;
+  }
+  .buttons .delete {
+    margin-top: 1rem;
+  }
+}
+
+.seeMore,
+.delete {
+  padding: 1rem 2rem;
   border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
-  font-size: 16px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
-.itemCard .buttons .seeMore:hover {
-  background-color: #0056b3;
+.seeMore:hover,
+.delete:hover {
+  filter: brightness(90%);
 }
-.itemCard .buttons .delete {
-  background-color: #ff0033;
+
+.seeMore {
+  background-color: #00bfff;
   color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
-.itemCard .buttons .delete:hover {
-  background-color: #b30000;
+
+.delete {
+  background-color: #dc3545;
+  color: #fff;
 }/*# sourceMappingURL=itemCard.module.css.map */

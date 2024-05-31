@@ -1,5 +1,6 @@
 import styles from "@/utils/saas/FormComponent.module.scss";
 import { ChangeEventHandler, FormEventHandler } from "react";
+
 interface formData {
   price: number;
   description: string;
@@ -11,101 +12,119 @@ interface formData {
   thumbnail: string;
   handleSubmit: FormEventHandler<HTMLFormElement>;
   handleChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  heading: string;
 }
-const Foorm = (formData: formData) => {
+
+const ProductForm = (formData: formData) => {
   return (
-    <div>
-      <form className={styles.addProductForm} onSubmit={formData.handleSubmit}>
-        <div className={styles.group}>
-          <label className={`${styles.group_label}`}>Basic Information</label>
+    <form className={styles.form} onSubmit={formData.handleSubmit}>
+      <p className={styles.title}>{formData.heading} Product</p>
+      <p className={styles.message}>Fill in the product details below.</p>
+      <div className={styles.flex}>
+        <label>
           <input
             type="text"
             name="title"
-            placeholder="Product Title"
+            placeholder=""
             value={formData.title}
             onChange={formData.handleChange}
             required
-            className={`${styles.input_feild} `}
+            className={styles.input}
           />
+          <span>Title</span>
+        </label>
+        <label>
           <input
             type="number"
             name="price"
-            placeholder="Price"
+            placeholder=""
             value={formData.price}
             onChange={formData.handleChange}
             required
-            className={`${styles.input_feild} `}
+            className={styles.input}
           />
-        </div>
-        <div className={styles.group}>
-          <label className={`${styles.group_label}`}>Discount & Stock</label>
+          <span>Price</span>
+        </label>
+      </div>
+      <div className={styles.flex}>
+        <label>
           <input
             type="number"
             name="discountPercentage"
-            placeholder="Discount Percentage"
+            placeholder=""
             value={formData.discountPercentage}
             onChange={formData.handleChange}
             required
-            className={`${styles.input_feild} `}
+            className={styles.input}
           />
+          <span>Discount Percentage</span>
+        </label>
+        <label>
           <input
             type="number"
             name="stock"
-            placeholder="Stock"
+            placeholder=""
             value={formData.stock}
             onChange={formData.handleChange}
             required
-            className={`${styles.input_feild} `}
+            className={styles.input}
           />
-        </div>
-        <div className={styles.group}>
-          <label className={`${styles.label}`}>Additional Information</label>
-          <input
-            type="text"
-            name="brand"
-            placeholder="Brand"
-            value={formData.brand}
-            onChange={formData.handleChange}
-            required
-            className={`${styles.input_feild} `}
-          />
-          <input
-            type="text"
-            name="category"
-            placeholder="Category"
-            value={formData.category}
-            onChange={formData.handleChange}
-            required
-            className={`${styles.input_feild} `}
-          />
-        </div>
-        <div className={styles.group}>
-          <label className={`${styles.group_label}`}>Thumbnail URL</label>
-          <input
-            type="text"
-            name="thumbnail"
-            placeholder="Thumbnail URL"
-            value={formData.thumbnail}
-            required
-            onChange={formData.handleChange}
-            className={`${styles.input_feild} `}
-          />
-        </div>
+          <span>Stock</span>
+        </label>
+      </div>
+      <label>
+        <input
+          type="text"
+          name="brand"
+          placeholder=""
+          value={formData.brand}
+          onChange={formData.handleChange}
+          required
+          className={styles.input}
+        />
+        <span>Brand</span>
+      </label>
+      <label>
+        <input
+          type="text"
+          name="category"
+          placeholder=""
+          value={formData.category}
+          onChange={formData.handleChange}
+          required
+          className={styles.input}
+        />
+        <span>Category</span>
+      </label>
+      <label>
+        <input
+          type="text"
+          name="thumbnail"
+          placeholder=""
+          value={formData.thumbnail}
+          onChange={formData.handleChange}
+          required
+          className={styles.input}
+        />
+        <span>Thumbnail URL</span>
+      </label>
+      <label>
         <textarea
           name="description"
-          placeholder="Description"
+          placeholder=""
           value={formData.description}
-          required
           onChange={formData.handleChange}
           rows={5}
-          className={`${styles.input_feild} `}
+          required
+          className={styles.input}
         />
-        <button type="submit" className={`${styles.submit_button}`}>
-          Add Product
-        </button>
-      </form>
-    </div>
+        <span>Description</span>
+      </label>
+      <button type="submit" className={styles.submit}>
+        {formData.heading} Product
+      </button>
+    </form>
   );
 };
 
-export default Foorm;
+export default ProductForm;

@@ -79,6 +79,7 @@ const AddProduct = () => {
       title={formData.title}
       handleChange={handleChange}
       handleSubmit={handleSubmit}
+      heading={"Add"}
     ></Foorm>
   );
 };

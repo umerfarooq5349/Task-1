@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
-import Foorm from "../form/form";
+
 import { getItem, updateItem } from "@/app/api/item"; // Import getItem function
 import { Productts } from "@/utils/model/item";
+import ProductForm from "../form/form";
 
 interface UpdateProductFormProps {
   id: number;
@@ -72,7 +73,7 @@ const UpdateProductForm: React.FC<UpdateProductFormProps> = ({ id }) => {
 
   return (
     <div>
-      <Foorm
+      <ProductForm
         brand={formData.brand}
         category={formData.category}
         description={formData.description}
@@ -83,7 +84,8 @@ const UpdateProductForm: React.FC<UpdateProductFormProps> = ({ id }) => {
         handleChange={handleChange}
         title={formData.title}
         handleSubmit={handleSubmit}
-      ></Foorm>
+        heading={"Update"}
+      ></ProductForm>
     </div>
   );
 };

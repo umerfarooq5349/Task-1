@@ -1,6 +1,7 @@
 import { Productts } from "@/utils/model/item";
 import { Route } from "next";
 import { useRouter } from "next/router";
+import { config } from "process";
 
 export const getAllItems = async () => {
   let response = await fetch("http://localhost:8080/api/items/");

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap");
 .container {
-  background-color: #343a40;
+  background-color: rgba(26, 26, 26, 0.4549019608);
   display: flex;
   width: inherit;
   flex-direction: row;
