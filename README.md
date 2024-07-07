@@ -2,14 +2,14 @@
 
 ### Project Description
 
-Welcome to Task-1! This project demonstrates a simple RESTful API built with Node.js and Next.js. The goal is to get hands-on experience with Node.js fundamentals such as routing, middleware, and request/response handling. 
+Welcome to Task-1! This project demonstrates a simple RESTful API built with **Node.js** and **Next.js**. The goal is to get hands-on experience with **Node.js fundamentals** such as routing, middleware, and request/response handling.
 
 ### Features
 
-- CRUD Operations on Ecommerce Products 🛍️
-- JSON Parsing Middleware 🛠️
-- Robust Error Handling for Various Scenarios ❗
-- API Documentation with Postman/Swagger 📜
+- **CRUD Operations** on Ecommerce Products 🛍️
+- JSON Parsing **Middleware** 🛠️
+- Robust **Error Handling** for Various Scenarios ❗
+- **API Documentation** with Postman/Swagger 📜
 
 ### Project Structure
 
@@ -123,10 +123,7 @@ Task-1/
 - **SASS**: For styling
 - **TypeScript**: For both Next.js and Node.js
 
+---
 ### Author
 
 Umer Farooq
-
----
-
-To add code screenshots, you can capture specific parts of your code using a tool like Snipping Tool (Windows), Grab (macOS), or any screenshot tool. Upload these images to an image hosting service like Imgur, and replace the placeholder URLs in the `![image](https://via.placeholder.com/400x200)` tags with the URLs of your uploaded images.
