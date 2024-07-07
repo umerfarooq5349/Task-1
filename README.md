@@ -1,17 +1,17 @@
-# Task-1: Basic API Development with Node.js and Next.js
+## Task-1: Basic API Development with Node.js and Next.js 🚀
 
-## Project Description
+### Project Description
 
-This project implements a simple RESTful API using Node.js with Next.js as the framework. The focus is on fundamental concepts of Node.js such as routing, middleware, and handling requests and responses. This project is part of a series of tasks evaluating the implementation of MERN stack functionalities.
+Welcome to Task-1! This project demonstrates a simple RESTful API built with Node.js and Next.js. The goal is to get hands-on experience with Node.js fundamentals such as routing, middleware, and request/response handling. 
 
-## Features
+### Features
 
-- CRUD Operations on Ecommerce Products
-- JSON Parsing Middleware
-- Error Handling for Invalid Requests and Server Errors
-- API Documentation using Postman / Swagger
+- CRUD Operations on Ecommerce Products 🛍️
+- JSON Parsing Middleware 🛠️
+- Robust Error Handling for Various Scenarios ❗
+- API Documentation with Postman/Swagger 📜
 
-## Project Structure
+### Project Structure
 
 ```plaintext
 Task-1/
@@ -31,53 +31,58 @@ Task-1/
     └── README.md
 ```
 
-## Installation
+### Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
 
     ```sh
     git clone https://github.com/umerfarooq5349/Task-1.git
     cd Task-1
     ```
 
-2. Navigate to the `server` directory and install dependencies:
+2. **Install server dependencies:**
 
     ```sh
     cd server
     npm install
     ```
 
-3. Navigate to the `ecommerce` directory and install dependencies:
+3. **Install ecommerce client dependencies:**
 
     ```sh
     cd ../ecommerce
     npm install
     ```
 
-## Running the Application
+### Running the Application
 
-1. Start the server:
+1. **Start the server:**
 
     ```sh
     cd server
     npm start
     ```
 
-2. Start the ecommerce client:
+    ![Server Start](https://via.placeholder.com/400x200)
+
+2. **Start the ecommerce client:**
 
     ```sh
     cd ../ecommerce
     npm run dev
     ```
 
-## API Endpoints
+    ![Client Start](https://via.placeholder.com/400x200)
 
-### Get All Products
+### API Endpoints
+
+#### Get All Products
 
 - **URL:** `/api/items`
 - **Method:** `GET`
 - **Description:** Retrieves a list of all products.
 - **Response:**
+
     ```json
     [
         {
@@ -88,57 +93,29 @@ Task-1/
     ]
     ```
 
-### Create a Product
+#### Create a Product
 
 - **URL:** `/api/items`
 - **Method:** `POST`
 - **Description:** Creates a new product.
 - **Request Body:**
+
     ```json
     {
         "name": "New Product",
         "price": 150
     }
     ```
+
 - **Response:**
+
     ```json
     {
         "message": "Product created successfully"
     }
     ```
 
-### Update a Product
-
-- **URL:** `/api/items/:id`
-- **Method:** `PUT`
-- **Description:** Updates an existing product.
-- **Request Body:**
-    ```json
-    {
-        "name": "Updated Product",
-        "price": 200
-    }
-    ```
-- **Response:**
-    ```json
-    {
-        "message": "Product updated successfully"
-    }
-    ```
-
-### Delete a Product
-
-- **URL:** `/api/items/:id`
-- **Method:** `DELETE`
-- **Description:** Deletes an existing product.
-- **Response:**
-    ```json
-    {
-        "message": "Product deleted successfully"
-    }
-    ```
-
-## Dependencies
+### Dependencies
 
 - **Node.js**: LTS version
 - **Next.js**: Latest version
@@ -146,8 +123,10 @@ Task-1/
 - **SASS**: For styling
 - **TypeScript**: For both Next.js and Node.js
 
-## Author
+### Author
 
 Umer Farooq
 
 ---
+
+To add code screenshots, you can capture specific parts of your code using a tool like Snipping Tool (Windows), Grab (macOS), or any screenshot tool. Upload these images to an image hosting service like Imgur, and replace the placeholder URLs in the `![image](https://via.placeholder.com/400x200)` tags with the URLs of your uploaded images.
